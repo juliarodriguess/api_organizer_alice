@@ -7,7 +7,11 @@ const roadSchema = new Schema({
     status: { type: String, default: "NOT_SELECTED" },
     position: { type: Number, default: 0 },
     activities: [{
-        informations: { type: Schema.Types.ObjectId, ref: 'Activity'},
+        informations: { 
+            title: { type: String },
+            local: { type: String },
+            status: { type: String, default: "ACTIVE" }
+        },
         slots: [
             {
                 day: {

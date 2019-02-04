@@ -2,23 +2,23 @@ const server = require('./config/server')
 require('./config/database')
 require('./config/routes')(server)
 
-const Activity = require('./api/activities/activities')
-const Road = require('./api/roads/roads')
+// const Activity = require('./api/activities/activities')
+// const Road = require('./api/roads/roads')
 
-let futebol = new Activity({
-    title: 'Futebol'
-})
+// let futebol = new Activity({
+//     title: 'Futebol'
+// })
 
-futebol.save()
+// futebol.save()
 
 
-let corpo = new Road({
-    title: 'Corpo',
-    activities:[{
-        informations: futebol._id
-    }]
-})
+// let corpo = new Road({
+//     title: 'Corpo',
+//     activities:[{
+//         informations: futebol._id
+//     }]
+// })
 
-corpo.save()
-Road.populate('activities[0].informations').exec()
+// corpo.save()
+// Road.populate("activities[0].informations").exec()
 
