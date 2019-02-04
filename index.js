@@ -21,3 +21,7 @@ let corpo = new Road({
 
 corpo.save()
 corpo.populate('futebol')
+    .exec(function (err, story) {
+    if (err) return handleError(err);
+    console.log('A atividade é', corpo.futebol.title);
+  });
