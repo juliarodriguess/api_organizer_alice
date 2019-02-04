@@ -4,8 +4,8 @@ const Schema = restful.mongoose.Schema
 const roadSchema = new Schema({
     _id: { type: Schema.Types.ObjectId, auto: true },
     title: { type: String },
-    status: { type: String },
-    position: { type: Number },
+    status: { type: String, default: "NOT_SELECTED" },
+    position: { type: Number, default: 0 },
     activities: [{
         informations: { type: Schema.Types.ObjectId, ref: 'Activity'},
         slots: [
