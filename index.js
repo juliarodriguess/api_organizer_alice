@@ -20,3 +20,4 @@ let corpo = new Road({
 })
 
 corpo.save()
+corpo.populate('futebol')
