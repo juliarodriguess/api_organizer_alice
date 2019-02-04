@@ -8,12 +8,14 @@ const roadSchema = new Schema({
     position: { type: Number },
     activities: {
         informations: { type: Schema.Types.ObjectId, ref: 'Activity'},
-        slots: {
-            day: {
+        slots: [
+            {
+                day: {
                 number: { type: Number },
                 period: { type: [Number] }
             }
-        }
+            }
+        ]
     },
     classList: { type: Schema.Types.ObjectId, ref: 'User'}
 })
