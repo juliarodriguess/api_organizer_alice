@@ -6,8 +6,8 @@ const roadSchema = new Schema({
     title: { type: String },
     status: { type: String },
     position: { type: Number },
-    activities: {
-        informations: { type: [Schema.Types.ObjectId], ref: 'Activity'},
+    activities: [{
+        informations: { type: Schema.Types.ObjectId, ref: 'Activity'},
         slots: [
             {
                 day: {
@@ -16,7 +16,7 @@ const roadSchema = new Schema({
             }
             }
         ]
-    },
+    }],
     classList: { type: Schema.Types.ObjectId, ref: 'User'}
 })
 
