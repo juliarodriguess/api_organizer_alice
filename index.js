@@ -20,5 +20,6 @@ require('./config/routes')(server)
 // })
 
 // corpo.save()
-// Road.populate("activities[0].informations").exec()
+// const roadTeste = Road.find().populate("activities[0].informations").exec()
+// console.log(roadTeste)
 

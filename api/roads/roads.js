@@ -20,8 +20,7 @@ const roadSchema = new Schema({
             }
             }
         ]
-    }],
-    classList: { type: Schema.Types.ObjectId, ref: 'User'}
+    }]
 })
 
 module.exports = restful.model('Road', roadSchema)
