@@ -11,7 +11,7 @@ module.exports = function(server) {
     const activitiesService = require('../api/activities/activitiesService')
     activitiesService.register(router, '/activities')
 
-    const usersService = require('../api/users/usersService')
+    const usersService = require('../api/users/usersServices')
     usersService.register(router, '/user')
 
     const agendaService = require('../api/agenda/agendaService')
