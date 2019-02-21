@@ -4,7 +4,7 @@ const Schema = restful.mongoose.Schema
 const userSchema = new Schema({
     _id: { type: Schema.Types.ObjectId, auto: true },
     fullName: { type: String },
-    classRoom: { type: String },
+    classroom: { type: String },
     email: { type: String },
     userType: { type: String }
 })

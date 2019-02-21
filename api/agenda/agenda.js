@@ -5,9 +5,12 @@ const agendaSchema = new Schema({
     _id: { type: Schema.Types.ObjectId, auto: true },
     user: {
         fullName: { type: String },
-        classRoom: { type: String },
+        classroom: { type: String },
     },
-    roadsPriority: { type: [String]},
+    roadsPriority: [{
+        index: { type: Number },
+        id: { type: String }
+    }],
     roadChosen: { type: Number }
 })
 
