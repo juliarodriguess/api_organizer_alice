@@ -11,7 +11,7 @@ const agendaSchema = new Schema({
         index: { type: Number },
         id: { type: String }
     }],
-    roadChosen: { type: Number }
+    roadChosen: { type: String }
 })
 
 module.exports = restful.model('Agenda', agendaSchema)
