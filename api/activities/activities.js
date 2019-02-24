@@ -5,6 +5,8 @@ const activitySchema = new Schema({
     _id: { type: Schema.Types.ObjectId, auto: true },
     title: { type: String },
     local: { type: String },
+    description: { type: String },
+    materials: { type: String },
     status: { type: String, default: "ACTIVE" },
     comments: { type: String }
 })
