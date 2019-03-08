@@ -7,6 +7,7 @@ const activitySchema = new Schema({
     local: { type: String },
     description: { type: String },
     materials: { type: String },
+    link: { type: String },
     status: { type: String, default: "ACTIVE" },
     comments: { type: String }
 })
