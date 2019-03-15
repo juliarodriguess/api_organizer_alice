@@ -12,7 +12,14 @@ const agendaSchema = new Schema({
         index: { type: Number },
         id: { type: String }
     }],
-    roadChosen: { type: String }
+    roadChosen: { type: String },
+    attendance: {
+        monday: {type: Boolean},
+        tuesday: {type: Boolean},
+        wednesday: {type: Boolean},
+        thursday: {type: Boolean},
+        friday: {type: Boolean}
+    }
 })
 
 module.exports = restful.model('Agenda', agendaSchema)
