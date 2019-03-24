@@ -9,7 +9,8 @@ const agendaSchema = new Schema({
         classroom: { type: String },
     },
     roadsPriority: [{
-        index: { type: Number },
+        option: { type: Number },
+        title: { type: String },
         id: { type: String }
     }],
     roadChosen: { type: String },
