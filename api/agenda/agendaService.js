@@ -1,6 +1,6 @@
 const Agenda = require('./agenda')
 
-Agenda.methods(['get', 'post', 'put', 'delete'])
+Agenda.methods(['get', 'post', 'put','options', 'patch', 'delete'])
 
 Agenda.updateOptions({new:true, runValidators: true})
 
