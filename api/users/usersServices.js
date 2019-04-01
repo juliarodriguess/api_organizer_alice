@@ -1,6 +1,6 @@
 const User = require('./users')
 
-User.methods(['get', 'post', 'put', 'delete'])
+User.methods(['get', 'post', 'put','options', 'patch', 'delete'])
 
 User.updateOptions({new:true, runValidators: true})
 

@@ -1,6 +1,6 @@
 const Activity = require('./activities')
 
-Activity.methods(['get', 'post', 'put', 'delete'])
+Activity.methods(['get', 'post', 'put','options', 'patch', 'delete'])
 
 Activity.updateOptions({new:true, runValidators: true})
 
