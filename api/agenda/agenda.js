@@ -15,13 +15,13 @@ const agendaSchema = new Schema({
     }],
     roadChosen: { type: String },
     attendance: [
-       { monday: {type: Boolean }},
-       { tuesday: {type: Boolean }},
-       { wednesday: {type: Boolean }},
-       { thursday: {type: Boolean }},
-       { friday: {type: Boolean }},
-       { saturday: {type: Boolean }},
-       { sunday: {type: Boolean } }
+       { monday: {type: String }},
+       { tuesday: {type: String }},
+       { wednesday: {type: String }},
+       { thursday: {type: String }},
+       { friday: {type: String }},
+       { saturday: {type: String }},
+       { sunday: {type: String } }
     ]
 })
 
