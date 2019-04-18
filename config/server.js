@@ -28,4 +28,9 @@ server.get('/', (req, res) => {
     res.send('Hello World')
 })
 
+server.patch('/api/agenda/:id', (req, res) => {
+  
+  res.send("oi")
+});
+
 module.exports = server
