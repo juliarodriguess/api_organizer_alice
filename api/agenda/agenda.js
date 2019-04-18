@@ -14,15 +14,15 @@ const agendaSchema = new Schema({
         id: { type: String }
     }],
     roadChosen: { type: String },
-    attendance: [
-       { monday: {type: String }},
-       { tuesday: {type: String }},
-       { wednesday: {type: String }},
-       { thursday: {type: String }},
-       { friday: {type: String }},
-       { saturday: {type: String }},
-       { sunday: {type: String } }
-    ]
+    attendance: [{
+        monday: {type: String },
+        tuesday: {type: String },
+        wednesday: {type: String },
+        thursday: {type: String },
+        friday: {type: String },
+        saturday: {type: String },
+        sunday: {type: String } 
+    }]
 })
 
 module.exports = restful.model('Agenda', agendaSchema)
