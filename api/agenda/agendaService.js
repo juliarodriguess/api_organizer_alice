@@ -5,6 +5,6 @@ const router = express.Router();
 Agenda.methods(['get', 'post', 'put','options', 'patch', 'delete'])
 
 
-// Agenda.updateOptions({new:true, runValidators: true})
+Agenda.updateOptions({new:true, runValidators: true})
 
 module.exports = Agenda
