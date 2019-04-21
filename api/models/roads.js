@@ -1,7 +1,7 @@
-const restful = require('node-restful')
-const Schema = restful.mongoose.Schema
+const mongoose = require('../../config/database');
+const Schema = mongoose.Schema;
 
-const roadSchema = new Schema({
+let RoadSchema = new Schema({
     _id: { type: Schema.Types.ObjectId, auto: true },
     title: { type: String },
     status: { type: String, default: "NOT_SELECTED" },
@@ -21,6 +21,8 @@ const roadSchema = new Schema({
             }
         ]
     }]
-})
+});
 
-module.exports = restful.model('Road', roadSchema)
+let Road = mongoose.model('Road', RoadSchema);
+
+module.exports = Road;

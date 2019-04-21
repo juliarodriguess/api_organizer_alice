@@ -1,7 +1,7 @@
-const restful = require('node-restful')
-const Schema = restful.mongoose.Schema
+const mongoose = require('../../config/database');
+const Schema = mongoose.Schema;
 
-const agendaSchema = new Schema({
+let AgendaSchema = new Schema({
     _id: { type: Schema.Types.ObjectId, auto: true },
     time : { type : Date, default: Date.now },
     user: {
@@ -15,9 +15,11 @@ const agendaSchema = new Schema({
     }],
     roadChosen: { type: String },
     attendance: [{
-        day: {type: String},
-        status: {type: Boolean}
+        day: { type: String, lowercase: true },
+        status: { type: String }
     }]
-})
+});
 
-module.exports = restful.model('Agenda', agendaSchema)
+let Agenda = mongoose.model('Agenda', AgendaSchema);
+
+module.exports = Agenda;

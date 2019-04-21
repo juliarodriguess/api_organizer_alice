@@ -1,25 +1,17 @@
-const server = require('./config/server')
-require('./config/database')
-require('./config/routes')(server)
+const express = require('express');
+const bodyParser = require('body-parser');
 
-// const Activity = require('./api/activities/activities')
-// const Road = require('./api/roads/roads')
+const app = express();
 
-// let futebol = new Activity({
-//     title: 'Futebol'
-// })
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: false }));
 
-// futebol.save()
+require('./app/controllers/authController')(app);
+require('./app/controllers/agendaController')(app);
 
+// app.get('/', (req, res) => {
+//     res.send('Hello World')
+// });
 
-// let corpo = new Road({
-//     title: 'Corpo',
-//     activities:[{
-//         informations: futebol._id
-//     }]
-// })
-
-// corpo.save()
-// const roadTeste = Road.find().populate("activities[0].informations").exec()
-// console.log(roadTeste)
+app.listen(3000);
 
