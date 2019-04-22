@@ -2,7 +2,7 @@ const express = require('express');
 
 const router = express.Router();
 
-const Activity = require('../models/Activity');
+const Activity = require('../models/activity.js');
 
 router.get('/', async (req, res) => {
     try{

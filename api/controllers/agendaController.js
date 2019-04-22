@@ -2,7 +2,7 @@ const express = require('express');
 
 const router = express.Router();
 
-const Agenda = require('../models/Agenda');
+const Agenda = require('../models/agenda.js');
 
 router.get('/', async (req, res) => {
     try{
