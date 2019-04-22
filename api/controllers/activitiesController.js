@@ -61,4 +61,4 @@ router.delete('/:activityId', async (req, res) => {
     }
 })
 
-module.exports = app => app.use('/activity', router);
+module.exports = app => app.use('/activities', router);

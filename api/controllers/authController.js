@@ -60,4 +60,4 @@ router.delete('/:userId', async (req, res) => {
     }
 })
 
-module.exports = app => app.use('/auth', router);
+module.exports = app => app.use('/user', router);

@@ -61,4 +61,4 @@ router.delete('/:roadId', async (req, res) => {
     }
 })
 
-module.exports = app => app.use('/road', router);
+module.exports = app => app.use('/roads', router);
