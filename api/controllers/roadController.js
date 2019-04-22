@@ -19,7 +19,7 @@ router.get('/:roadId', async (req, res) => {
     try{
         const roads = await Road.findById(req.params.roadId);
 
-        return res.send({roads})
+        return res.send(roads)
 
     } catch (err) {
         return res.status(400).send({ error: 'Error loading the refered road'})
