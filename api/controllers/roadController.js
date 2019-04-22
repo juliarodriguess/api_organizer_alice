@@ -2,7 +2,7 @@ const express = require('express');
 
 const router = express.Router();
 
-const Road = require('../models/road.js');
+const Road = require('../models/roads.js');
 
 router.get('/', async (req, res) => {
     try{
