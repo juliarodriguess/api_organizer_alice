@@ -8,7 +8,7 @@ router.get('/', async (req, res) => {
     try{
         const roads = await Road.find();
 
-        return res.send({roads})
+        return res.send(roads)
 
     } catch (err) {
         return res.status(400).send({ error: 'Error loading the roads'})
