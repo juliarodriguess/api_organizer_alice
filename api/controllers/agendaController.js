@@ -38,7 +38,7 @@ router.post('/', async (req, res) => {
     }
 })
 
-router.put('/:agendaId', async (req, res) => {
+router.put('/:agendaId/', async (req, res) => {
     try {
         const agenda = await Agenda.findByIdAndUpdate(req.params.agendaId, {$push: req.body}, {new: true})
 
