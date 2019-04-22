@@ -8,7 +8,7 @@ router.post('/register', async (req, res) => {
     try { 
         const user = await User.create(req.body);
 
-        return res.send({ user });
+        return res.send(user);
 
     } catch (err) {
         return res.status(400).send({ error: 'Registration failed' });
@@ -19,7 +19,7 @@ router.get('/', async (req, res) => {
     try{
         const users = await User.find();
 
-        return res.send({users})
+        return res.send(users)
 
     } catch (err) {
         return res.status(400).send({ error: 'Error loading the users'})
@@ -30,7 +30,7 @@ router.get('/:userId', async (req, res) => {
     try{
         const user = await User.findById(req.params.userId);
 
-        return res.send({user})
+        return res.send(user)
 
     } catch (err) {
         return res.status(400).send({ error: 'Error loading the refered user'})

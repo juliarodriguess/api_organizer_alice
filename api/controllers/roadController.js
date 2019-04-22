@@ -31,7 +31,7 @@ router.post('/', async (req, res) => {
     try{
         const road = await Road.create(req.body);
         
-        return res.send({road})
+        return res.send(road)
         
     } catch (err) {
         return res.status(400).send({ error: 'Error creating new road'})

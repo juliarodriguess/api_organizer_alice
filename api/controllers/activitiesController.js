@@ -8,7 +8,7 @@ router.get('/', async (req, res) => {
     try{
         const activities = await Activity.find();
 
-        return res.send({activities})
+        return res.send(activities)
 
     } catch (err) {
         return res.status(400).send({ error: 'Error loading the activities'})
@@ -19,7 +19,7 @@ router.get('/:activityId', async (req, res) => {
     try{
         const activity = await Activity.findById(req.params.activityId);
 
-        return res.send({activity})
+        return res.send(activity)
 
     } catch (err) {
         return res.status(400).send({ error: 'Error loading the refered activity'})
@@ -31,7 +31,7 @@ router.post('/', async (req, res) => {
     try{
         const activity = await Activity.create(req.body);
         
-        return res.send({activity})
+        return res.send(activity)
         
     } catch (err) {
         return res.status(400).send({ error: 'Error creating new activity'})

@@ -8,7 +8,7 @@ router.get('/', async (req, res) => {
     try{
         const agendas = await Agenda.find();
 
-        return res.send({agendas})
+        return res.send(agendas)
 
     } catch (err) {
         return res.status(400).send({ error: 'Error loading the agendas'})
@@ -19,7 +19,7 @@ router.get('/:agendaId', async (req, res) => {
     try{
         const agendas = await Agenda.findById(req.params.agendaId);
 
-        return res.send({agendas})
+        return res.send(agendas)
 
     } catch (err) {
         return res.status(400).send({ error: 'Error loading the refered agenda'})
@@ -31,7 +31,7 @@ router.post('/', async (req, res) => {
     try{
         const agenda = await Agenda.create(req.body);
         
-        return res.send({agenda})
+        return res.send(agenda)
         
     } catch (err) {
         return res.status(400).send({ error: 'Error creating new agenda'})
