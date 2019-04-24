@@ -14,15 +14,10 @@ let AgendaSchema = new Schema({
         id: { type: String }
     }],
     roadChosen: { type: String },
-    attendance: [
-        {sunday: {type: Boolean}},
-        {monday: {type: Boolean}},
-        {tuesday: {type: Boolean}},
-        {wednesday: {type: Boolean}},
-        {thursday: {type: Boolean}},
-        {friday: {type: Boolean}},
-        {saturday: {type: Boolean}},
-    ]
+    attendance: [{
+        day: {type: String},
+        status: {type: Boolean}
+    }]
 });
 
 let Agenda = mongoose.model('Agenda', AgendaSchema);
